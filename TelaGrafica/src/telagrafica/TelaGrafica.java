@@ -15,7 +15,8 @@ public class TelaGrafica {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //teste branch
+       TelaPrincipal telaPrincipal = new TelaPrincipal();
+       telaPrincipal();
     }
     
 }
