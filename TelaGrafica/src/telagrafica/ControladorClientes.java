@@ -20,8 +20,12 @@ public class ControladorClientes {
     public static ControladorClientes getInstancia(){
         if(instancia == null){
             instancia = new ControladorClientes();
-            System.out.println("Já Instanciado!");
         }
         return instancia;
+    }
+
+
+    public void realizaAcao(String actionCommand) {
+        System.out.println(actionCommand);
     }
 }

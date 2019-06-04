@@ -20,24 +20,33 @@ public class TelaPrincipal extends JFrame {
 
     private JLabel lblPrimeiraTela;
     private JButton btnUhul;
+   
     
     public TelaPrincipal() {
         super("Primeira Tela com JFrame");
 
+        
         Container container = getContentPane();
         container.setLayout(new FlowLayout());
 
+        //LABEL PRIMEIRA TELA
         lblPrimeiraTela = new JLabel();
-        btnUhul = new JButton();
-        
         lblPrimeiraTela.setText("Primeira Tela!");
+        
+        //BOTAO UHUL
+        btnUhul = new JButton();        
         btnUhul.setText("Uhul!");
+        btnUhul.setActionCommand("1");
+        
+        GerenciadorBotoes btnManager = new GerenciadorBotoes();
+        btnUhul.addActionListener(btnManager);
         
         container.add(lblPrimeiraTela);
         container.add(btnUhul);
         
         setSize(360, 360);
         setVisible(true);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
